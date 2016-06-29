@@ -497,7 +497,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Canny">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#EdgeDetection"/>
-        <detectEdges rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple"/>
+        <detectEdges rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SimpleEdges"/>
     </owl:NamedIndividual>
     
 
@@ -730,13 +730,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Shelf">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Furniture"/>
+        <hasEdges rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SimpleEdges"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple -->
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SimpleEdges -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SimpleEdges">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Edges"/>
     </owl:NamedIndividual>
     
@@ -782,6 +783,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Table">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Furniture"/>
+        <hasColor rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Multiple"/>
+        <hasEdges rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SimpleEdges"/>
     </owl:NamedIndividual>
     
 
