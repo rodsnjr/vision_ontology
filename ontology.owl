@@ -137,18 +137,10 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Corridor">
         <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Edges"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
-                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangular"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Edges"/>
+            </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Environment"/>
     </owl:Class>
@@ -183,6 +175,10 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Color"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Edges"/>
@@ -241,10 +237,6 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Distinguished"/>
-                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#hasFeature"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Text"/>
@@ -455,10 +447,36 @@
     
 
 
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Black -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Black">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Distinguished"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Canny -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Canny">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#EdgeDetection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Class_Chair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Class_Chair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Chair"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Black"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Clusters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Clusters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Feature"/>
     </owl:NamedIndividual>
     
 
@@ -467,6 +485,42 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Color_Detection">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#ColorDetection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Transparent_Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Concrete_Corridor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Concrete_Corridor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Corridor"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Concrete_Stairs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Concrete_Stairs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Stairs"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Sofa"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch_Texture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch_Texture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch_Texture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Texture"/>
     </owl:NamedIndividual>
     
 
@@ -475,6 +529,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Glass_Door">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Door"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Corners"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Transparent_Color"/>
     </owl:NamedIndividual>
     
 
@@ -483,6 +540,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Harris_Corner_Detection">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#CornerDetection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Corners"/>
     </owl:NamedIndividual>
     
 
@@ -491,6 +549,42 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Hough_Shape_Transform">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#ShapeDetection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Information_Text -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Information_Text">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Text"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangular"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Red -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Distinguished"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Room_Sign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Room_Sign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Information_Sign"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Black"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Information_Text"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangle"/>
     </owl:NamedIndividual>
     
 
@@ -499,6 +593,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SIFT">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Detection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Clusters"/>
     </owl:NamedIndividual>
     
 
@@ -507,6 +602,34 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#SURF">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Detection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Clusters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Corners -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Corners">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Corners"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Edges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Small_Extinguisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Small_Extinguisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Fire_Extinguisher"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Information_Text"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Rectangle"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Red"/>
     </owl:NamedIndividual>
     
 
@@ -515,6 +638,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Texture_Detection">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#ColorDetection"/>
+        <detectFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Couch_Texture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Transparent_Color -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Transparent_Color">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Color"/>
     </owl:NamedIndividual>
     
 
@@ -523,6 +655,17 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Wood_Door">
         <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Door"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Corners"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Simple_Edges"/>
+        <hasFeature rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Wood_Texture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Wood_Texture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Wood_Texture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rodney/ontologies/2016/5/untitled-ontology-2#Texture"/>
     </owl:NamedIndividual>
     
 
